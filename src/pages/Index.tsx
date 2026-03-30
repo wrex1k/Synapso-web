@@ -85,7 +85,7 @@ const FloatingBlurs = () => {
 /* ─── Download button ─── */
 const DownloadButton = () => (
   <a
-    href="/download.txt"
+    href="https://github.com/wrex1k/Synapso/releases/latest/download/Synapso-v1.0.0.zip"
     download
     className="group relative inline-flex items-center gap-3 px-8 py-3.5 rounded-full bg-primary font-semibold text-primary-foreground text-base transition-all duration-300 hover:scale-[1.03] hover:shadow-[0_0_40px_hsl(166_50%_37%/0.35)] glow-primary"
   >
