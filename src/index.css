@@ -1,0 +1,77 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://api.fontshare.com/v2/css?f[]=general-sans@300,400,500,600,700&display=swap');
+
+@layer base {
+  :root {
+    --background: 0 0% 8%;
+    --foreground: 0 0% 96%;
+
+    --card: 160 14% 13%;
+    --card-foreground: 0 0% 96%;
+
+    --popover: 160 14% 13%;
+    --popover-foreground: 0 0% 96%;
+
+    --primary: 166 50% 37%;
+    --primary-foreground: 0 0% 98%;
+    --primary-glow: 160 48% 42%;
+
+    --secondary: 160 18% 16%;
+    --secondary-foreground: 0 0% 96%;
+
+    --muted: 160 10% 20%;
+    --muted-foreground: 0 0% 62%;
+
+    --accent-cyan: 199 91% 64%;
+    --accent-amber: 33 100% 65%;
+
+    --accent: 166 50% 37%;
+    --accent-foreground: 0 0% 98%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 160 12% 18%;
+    --input: 160 12% 18%;
+    --ring: 166 50% 37%;
+
+    --radius: 0.75rem;
+
+    --glow-primary: 0 0 40px hsl(166 50% 37% / 0.25);
+    --glass-bg: hsl(160 14% 13% / 0.6);
+    --glass-border: hsl(160 12% 22% / 0.5);
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'General Sans', -apple-system, sans-serif;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'General Sans', -apple-system, sans-serif;
+  }
+}
+
+@layer utilities {
+  .glass {
+    background: var(--glass-bg);
+    border: 1px solid var(--glass-border);
+    backdrop-filter: blur(20px);
+  }
+  .glow-primary {
+    box-shadow: var(--glow-primary);
+  }
+  .text-gradient-primary {
+    background: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--primary-glow)));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+}
